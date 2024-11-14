@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofIT - Pet Store & Beyond</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            <img src="https://i.ibb.co/CzhWBSX/Screenshot-2024-11-09-162350.png" alt="WoofIT Logo">
+            <p><h2>WoofIT</h2></p>
+        </div>
+        <nav class="navbar">
+            <a href="dog-businesses.html">Dog Businesses</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="magazine.html">Magazine</a>
+            <a href="dog-abc.html">Dog ABC</a>
+            <a href="search.html" class="search-icon" id="searchIcon">🔍</a>
+            <a href="#" class="cta" id="signInBtn">Sign In / Register</a>
+        </nav>
+    </header>
+
+   
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In / Register</h2>
+            <form action="https://example.com/login" method="POST"> 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content search-content">
+            <span class="close">&times;</span>
+            <form action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Search..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <img src="https://i.ibb.co/CzhWBSX/Screenshot-2024-11-09-162350.png" alt="Hero Logo" class="hero-logo">
+                <h1>Whether Big or Small, We Have it All!</h1>
+                <p>Your trusted destination for all pet essentials, tailored for pets of every size.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/d0pDQdP/Screenshot-2024-11-09-162829.png" alt="Dog with toy">
+            </div>
+        </div>
+    </section>
+
+    <section class="search-category">
+        <div class="search-container">
+            <input type="text" placeholder="Search For Dog, gadgets, food..." class="search-input">
+            <select class="category-dropdown">
+                <option value="french-bulldog">French Bulldog</option>
+                <option value="golden-retriever">Golden Retriever</option>
+                <option value="german-shepherd">German Shepherd</option>
+               
+            </select>
+            <input type="text" placeholder="Location" class="location-input" value="Stockholm, Sweden">
+            <button class="search-button">🔍</button>
+        </div>
+        <div class="categories">
+            <div class="category-card">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/ZKxBFkh/Screenshot-2024-11-09-170130.png" alt="Screenshot-2024-11-09-170130" border="0"></a>
+                <p>Buy a Dog</p>
+            </div>
+            <div class="category-card">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/8c6rLy5/Screenshot-2024-11-09-170442.png" alt="Screenshot 2024-11-09 170442" border="0"></a>
+                <p>Dog Businesses</p>
+            </div>
+            <div class="category-card">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/f8W5mvw/Screenshot-2024-11-09-170640.png" alt="Screenshot-2024-11-09-170640" border="0"></a>
+                <p>Dog Gadgets</p>
+            </div>
+            <div class="category-card">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/GVzwsJ5/Screenshot-2024-11-09-170736.png" alt="Screenshot 2024-11-09 170736" border="0"></a>
+                <p>Dog Food</p>
+            </div>
+        </div>
+    </section>
+    
+<section class="popular-breeds">
+    <h2>Popular Breeds</h2>
+    <div class="container">
+        <div class="breed">
+            <a href="https://www.wisdompanel.com/en-us/dog-breeds/pharaoh-hound"><img src="https://i.ibb.co/YRkgcKm/Screenshot-2024-11-09-194019.png" alt="Screenshot-2024-11-09-194019" border="0"></a>
+          <div class="breed-name">PHARAOH HOUND</div>
+        </div>
+        <div class="breed">
+            <a <a href="https://www.purina.in/find-a-pet/dog-breeds/bullmastiff"><img src="https://i.ibb.co/tBpNpts/Screenshot-2024-11-09-194232.png" alt="Screenshot 2024-11-09 194232" border="0"></a>
+          <div class="breed-name">BULLMASTIFF</div>
+        </div>
+        <div class="breed">
+            <a href="https://dogtime.com/dog-breeds/french-bulldog"><img src="https://i.ibb.co/3CsnGxy/Screenshot-2024-11-09-194525.png" alt="Screenshot 2024-11-09 194525" border="0"></a>
+          <div class="breed-name">FRENCH BULLDOG</div>
+        </div>
+        <div class="breed">
+            <a href="https://dogtime.com/dog-breeds/chow-chow"><img src="https://i.ibb.co/Q9Np8CZ/Screenshot-2024-11-09-194605.png" alt="Screenshot-2024-11-09-194605" border="0"></a>
+          <div class="breed-name">CHOW CHOW</div>
+        </div>
+        <div class="breed">
+            <a href="https://www.nadkc.org/kurzhaars.html"><img src="https://i.ibb.co/5Bvppjm/Screenshot-2024-11-09-194642.png" alt="Screenshot-2024-11-09-194642" border="0"></a>
+          <div class="breed-name">KURZHAAR</div>
+        </div>
+      </div>
+</section>
+    <section class="featured-dogs">
+        <h2>Featured Dogs</h2>
+        <div class="dog-list">
+            <div class="dog">
+                <a href="https://ibb.co/GVbXZhk"><img src="https://i.ibb.co/D7SNBqk/Pin-by-Brody-on-Animals-in-2024-I-love-dogs-Canine-Animals.jpg" alt="Pin-by-Brody-on-Animals-in-2024-I-love-dogs-Canine-Animals" border="0"></a>
+                <div class="dog-info">
+                    <div class="dog-owner">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/vD7B2s2/Screenshot-2024-11-09-200812.png" alt="Screenshot-2024-11-09-200812" border="0"></a>
+                        <p>Scotland</p>
+                    </div>
+                    <p><Strong>Golden Retriever</Strong></p>
+                    <p>Most popular dog breeds due to their friendly temperament, intelligence, and versatility.</p>
+                    <p>Rs 55,000.00</p>
+                </div>
+            </div>
+            <div class="dog">
+                <a href="https://ibb.co/cNdp17g"><img src="https://i.ibb.co/8jVR0SK/Pin-on-Animals.jpg" alt="Pin-on-Animals" border="0"></a>
+                <div class="dog-info">
+                    <div class="dog-owner">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/vD7B2s2/Screenshot-2024-11-09-200812.png" alt="Screenshot-2024-11-09-200812" border="0"></a>
+                        <p>England</p>
+                    </div>
+                    <p><strong>Beagle</strong></p>
+                    <p>Commonly kept as family pets and are also used in detection roles due to their keen noses, such as in airports for sniffing out prohibited items.</p>
+                    <p>Rs 45,000.00</p>
+                </div>
+            </div>
+            <div class="dog">
+                <a href="https://ibb.co/5kfrmgj"><img src="https://i.ibb.co/T1F46x0/Husky.jpg" alt="Husky" border="0"></a>
+                <div class="dog-info">
+                    <div class="dog-owner">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/vD7B2s2/Screenshot-2024-11-09-200812.png" alt="Screenshot-2024-11-09-200812" border="0"></a>
+                        <p>Siberia</p>
+                    </div>
+                    <p><strong>Siberian husky</strong></p>
+                    <p>Known for their beauty, thick double coat, erect triangular ears, and distinctive markings.</p>
+                    <p>Rs 90,000.00</p>
+                </div>
+            </div>
+            <div class="dog">
+                <a href="https://ibb.co/HtnG88g"><img src="https://i.ibb.co/fk4rww0/How-Long-do-French-Bulldogs-Sleep.jpg" alt="How-Long-do-French-Bulldogs-Sleep" border="0"></a>
+                <div class="dog-info">
+                    <div class="dog-owner">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/vD7B2s2/Screenshot-2024-11-09-200812.png" alt="Screenshot-2024-11-09-200812" border="0"></a>
+                        <p>France</p>
+                    </div>
+                    <p><strong>French bulldog</strong></p>
+                    <p>Known for their distinctive bat-like ears, compact size, and friendly, affectionate nature.</p>
+                    <p>Rs. 75,000.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <a href="https://ibb.co/BwBfd1M"><img src="https://i.ibb.co/stqgkBY/Portland-Pet-Food-Company-Wallys-Dog-Meal-Salmn-rice-Case-of-8-9-OZ.jpg" alt="Portland-Pet-Food-Company-Wallys-Dog-Meal-Salmn-rice-Case-of-8-9-OZ" border="0"></a>
+                <div class="product-info">
+                    <p>Nourish your furry friend with our premium, nutritious pet food—because they deserve the best!</p>
+                    <p>Rs. 700.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <a href="https://ibb.co/ByFX2rq"><img src="https://i.ibb.co/qNVtYWk/Didog-Genuine-Leather-Dog-Collars-with-Engraved-Nameplate-Personalized-Soft-Leather-Dog-Collar-with.jpg" alt="Didog-Genuine-Leather-Dog-Collars-with-Engraved-Nameplate-Personalized-Soft-Leather-Dog-Collar-with" border="0"></a>
+                <div class="product-info">
+                    <p>Ensure your dog's safety and comfort with our durable and stylish dog belts—perfect for every adventure!</p>
+                    <p>Rs. 550.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <a href="https://ibb.co/wwj7zLS"><img src="https://i.ibb.co/7RLQ1zn/Interactive-Dog-Treat-Ball-for-Teeth-Cleaning-and-Play-7cm-Red.jpg" alt="Interactive-Dog-Treat-Ball-for-Teeth-Cleaning-and-Play-7cm-Red" border="0"></a>
+                <div class="product-info">
+                    <p>Keep your pup entertained for hours with our durable and bouncy dog balls—fetch fun at its best!</p>
+                    <p>Rs. 250.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <a href="https://ibb.co/nnvTvDS"><img src="https://i.ibb.co/F0M9MBt/Pet-Dog-Plush-Animal-Chewing-Toy-Wear-resistant-Squeak-Cute-Bear-Fox-Toys-for-Dog-Puppy-Teddy-Intera.jpg" alt="Pet-Dog-Plush-Animal-Chewing-Toy-Wear-resistant-Squeak-Cute-Bear-Fox-Toys-for-Dog-Puppy-Teddy-Intera" border="0"></a>
+                <div class="product-info">
+                    <p>Delight your pup with our adorable, cuddly dog toys—perfect for snuggles and playtime alike!</p>
+                    <p>Rs. 450.00</p>
+                </div>
+            </div>
+        </div>
+        <a href="search.html" class="go-to-shop">GO TO THE SHOP</a>
+    </section>
+    <section class="magazine">
+        <h2>Magazine</h2>
+        <div class="magazine-article">
+            <a href="https://www.petsmag.co.uk/"><img src="https://i.ibb.co/D8rM28y/il-794x-N-5061416479-fnxo.webp" alt="il-794x-N-5061416479-fnxo" border="0"></a>
+            <div class="article-info">
+                <p>NOVEMBER 09, 2024</p>
+                <p>Discover WoofIT's Pet Magazine—your ultimate guide to pet care, training tips, and heartwarming stories. Stay informed and entertained with the latest trends and expert advice. Everything you need to give your furry friend the best life possible!"
+
+                    Explore in-depth articles on the health and well-being of your pets, from nutrition and exercise to preventive care. Dive into our training guides and behavioral tips to help you understand your pet better and build a stronger bond. Our heartwarming adoption stories and pet rescue features will inspire you and warm your heart. Plus, don't miss our DIY projects and fun activities to keep your pets engaged and happy.
+                    
+                    Join our community of passionate pet owners and stay connected with everything pawsome in the world of pets!
+                    
+                    If you need any more lines or have other sections to cover, just let me know! 🐶📖✨</p>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="dog-businesses.html">Dog Businesses</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="magazine.html">Magazine</a></li>
+          <li><a href="dog-abc.html">Dog ABC</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Popular Breeds</h3>
+        <ul>
+          <li><a href="https://dogtime.com/dog-breeds/french-bulldog">Bulldog</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/poodle">Poodle</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/doberman">Doberman</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/Dachshund">Dachshund</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/siberian-husky">Husky</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/Pharaoh-hound">Pharaoh-hound</a></li>
+          <li><a href="https://dogtime.com/dog-breeds/french-bulldog">French Bulldog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="help.html">Help (FAQ)</a></li>
+          <li><a href="carrierterms.html">Career</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column newsletter">
+        <h3>Newsletter Signup</h3>
+        <form>
+          <input type="email" placeholder="Enter Email" required>
+          <button type="submit">&#10148;</button>
+        </form>
+        <p>Follow us on</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/petshop.co.uk" target="_blank"> <i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://x.com/PetShop2Go" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/pet_store_collective/" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://in.pinterest.com/PetShop1/" target="_blank"> <i class="fa-brands fa-square-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024, WoofIT. All rights reserved.</p>
+    </div>
+  </footer>

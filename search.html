@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofIT - Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #ff6f61;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #611919;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .search-results {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e4cfcf;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .search-results h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #e69494;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>WoofIT Shop</h1>
+    
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1516453734593-8d198ae84bcf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner" class="banner">
+
+    <div class="search-results" id="resultsContainer">
+        <h2>Search Results</h2>
+        <p>Showing results for "<span id="queryText"></span>":</p>
+        <div id="resultsList">
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { image: 'https://supertails.com/cdn/shop/files/Frame344684061.png?v=1716471027', description: 'Premium Dog Food', price: 'Rs. 500' },
+            { image: 'https://cdn.shopify.com/s/files/1/0565/8021/0861/files/SAKTRSPDP-2024-10-15T153523.915_320x.png?v=1728986780', description: 'Chew Toy', price: 'Rs. 150' },
+            { image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR-X7s9piI_IyZNSVVHKjIu--DqH24F-TRJRN5fIRvODKcjEmw9434_j-OZHgImZQwgie8VQyIj1rLNADWRA3-2uyqv8TEj3qnuZLQCDvudfXey31yw8uvr1Q&usqp=CAE', description: 'Dog Bed', price: 'Rs. 1200' },
+            { image: 'https://www.eurekaforbes.com/cms/assets/prod/Gallery_1100x1100_5_b1e315e3e3.jpg', description: 'Grooming Kit', price: 'Rs. 750' },
+            { image: 'https://m.media-amazon.com/images/I/61lW8R+wO9L._SX522_.jpg', description: 'Dog Collar', price: 'Rs. 250' },
+            { image: 'https://headsupfortails.com/cdn/shop/products/DSC_8018.jpg?v=1603184956&width=823', description: 'Dog Sweater', price: 'Rs. 900' },
+            { image: 'https://m.media-amazon.com/images/I/41REpif65qL._SX300_SY300_QL70_FMwebp_.jpg', description: 'Interactive Puzzle Toy', price: 'Rs. 600' },
+            { image: 'https://headsupfortails.com/cdn/shop/files/DSC_3331.jpg?v=1697861990&width=823', description: 'Dog Leash', price: 'Rs. 300' },
+            { image: 'https://furballstory.com/cdn/shop/files/Healthy_Skin_Shampooch_1.jpg?v=1729495901&width=1000', description: 'Pet Shampoo', price: 'Rs. 400' }
+        ];
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            const resultsContainer = document.getElementById('resultsContainer');
+            const queryText = document.getElementById('queryText');
+            const resultsList = document.getElementById('resultsList');
+            
+            if (query) {
+                queryText.textContent = query;
+                resultsList.innerHTML = ''; // Clear previous results
+
+                products.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+                    productDiv.innerHTML = `
+                        <img src="${product.image}" alt="${product.description}">
+                        <div class="product-description">${product.description}</div>
+                        <div class="product-price">${product.price}</div>
+                    `;
+                    resultsList.appendChild(productDiv);
+                });
+
+                resultsContainer.style.display = 'block';
+            } else {
+                resultsContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
